@@ -1,0 +1,22 @@
+<main>
+  <h1>Confira alguns modelos e escolha o que mais lhe agrada</h1>
+  <h5>OBS: As imagens contidas nas páginas são apenas para melhor vizualização do design</h5>
+  <div class="center">
+    
+    <div class="book" *ngFor="let item of list | paginate: {itemsPerPage: contador, currentPage: pag}" (click)="navegarParaDetalhes(item.id)">
+      <div class="faixa"><p>CLIQUE E CONFIRA MAIS</p></div>
+      <img [src]="item.s" alt="imagens">
+      <div class="cover">
+        <img [src]="item.p" alt="capa">
+      </div>
+    </div>
+    
+    <pagination-controls
+      class="my-pagination"
+      (pageChange)="pag = $event" 
+      previousLabel="Anterior"
+      nextLabel="Próximo">
+    </pagination-controls>
+  </div>
+  
+</main>

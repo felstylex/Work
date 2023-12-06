@@ -1,0 +1,117 @@
+main {
+  margin-top: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  h1{
+    font-size: xx-large;
+    color: #021826;
+  }
+  .book {
+    position: relative;
+    border-radius: 10px;
+    width: 320px;
+    height: 400px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+    margin: 20px;
+    cursor: pointer;
+    img {
+      width: 320px;
+      height: 400px;
+      border-radius: 10px;
+    }
+  }
+  
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    img {
+      width: 320px;
+      height: 400px;
+      border-radius: 10px;
+    }
+  }
+  
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-83deg);
+    -ms-transform: rotatey(-83deg);
+    transform: rotatey(-83deg);
+  }
+  
+  .center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .faixa {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.829);
+    width: 320px;
+    text-align: center;
+
+    p {
+      color: white;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  }
+
+  .book:hover .faixa {
+    display: block;
+  }
+}
+
+pagination-controls  {
+  font-weight: bold;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: #021826;
+}
